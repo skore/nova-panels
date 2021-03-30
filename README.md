@@ -4,7 +4,7 @@ A custom panels package for those Nova resources with lots of relationships and/
 
 ## Status
 
-[![packagist version](https://img.shields.io/packagist/v/skorelabs/nova-panels)](https://packagist.org/packages/skorelabs/nova-panels) [![StyleCI](https://github.styleci.io/repos/352946226/shield?branch=main)](https://github.styleci.io/repos/352946226) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/94afbef5635c439bb9da4284ff2f3a7f)](https://www.codacy.com/gh/skore/nova-panels/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=skore/nova-panels&amp;utm_campaign=Badge_Grade)
+[![packagist version](https://img.shields.io/packagist/v/skorelabs/nova-panels)](https://packagist.org/packages/skorelabs/nova-panels) [![StyleCI](https://github.styleci.io/repos/352946226/shield?style=flat&branch=main)](https://github.styleci.io/repos/352946226) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/94afbef5635c439bb9da4284ff2f3a7f)](https://www.codacy.com/gh/skore/nova-panels/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=skore/nova-panels&amp;utm_campaign=Badge_Grade)
 
 ## Getting started
 
