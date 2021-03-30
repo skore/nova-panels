@@ -8,7 +8,6 @@ use Illuminate\Support\Collection;
 use Laravel\Nova\Contracts\ListableField;
 use Laravel\Nova\Panel;
 use SkoreLabs\NovaPanels\Contracts\PanelTab;
-use SkoreLabs\NovaPanels\Tab;
 
 class TabbedPanel extends StackedFieldsPanel
 {
@@ -31,6 +30,7 @@ class TabbedPanel extends StackedFieldsPanel
      * Add fields to the Tab.
      *
      * @param \SkoreLabs\NovaPanels\Contracts\PanelTab $tab
+     *
      * @return $this
      */
     public function addFields(PanelTab $tab): self
@@ -59,9 +59,9 @@ class TabbedPanel extends StackedFieldsPanel
             $field->panel = $this->name;
 
             $meta = [
-                'tab' => $tab->getName(),
+                'tab'     => $tab->getName(),
                 'tabSlug' => $tab->getSlug(),
-                'tabInfo' => Arr::except($tab->toArray(), ['fields', 'slug'])
+                'tabInfo' => Arr::except($tab->toArray(), ['fields', 'slug']),
             ];
 
             if ($field instanceof ListableField) {
@@ -80,7 +80,7 @@ class TabbedPanel extends StackedFieldsPanel
     }
 
     /**
-     * Show default Search if you need more space
+     * Show default Search if you need more space.
      *
      * @param bool $value
      *
@@ -94,9 +94,10 @@ class TabbedPanel extends StackedFieldsPanel
     }
 
     /**
-     * Whether the show the title
+     * Whether the show the title.
      *
      * @param bool $show
+     *
      * @return $this
      */
     public function showTitle($show = true): self
@@ -115,14 +116,15 @@ class TabbedPanel extends StackedFieldsPanel
     {
         return array_merge(parent::jsonSerialize(), [
             'defaultSearch' => $this->defaultSearch,
-            'showTitle' => $this->showTitle,
+            'showTitle'     => $this->showTitle,
         ]);
     }
 
     /**
      * Prepare the given fields.
      *
-     * @param  \Closure|array $fields
+     * @param \Closure|array $fields
+     *
      * @return array
      */
     protected function prepareFields($fields)
@@ -135,14 +137,14 @@ class TabbedPanel extends StackedFieldsPanel
                 $this->addFields($tab);
             });
 
-
         return $this->data ?? [];
     }
 
     /**
      * Convert fields to tabs.
-     * 
+     *
      * @param \Closure|array $fields
+     *
      * @return \Illuminate\Support\Collection
      */
     private function convertFieldsToTabs($fields): Collection
@@ -157,8 +159,9 @@ class TabbedPanel extends StackedFieldsPanel
     }
 
     /**
-     * @param mixed $fields
+     * @param mixed      $fields
      * @param string|int $key
+     *
      * @return \SkoreLabs\NovaPanels\Contracts\PanelTab
      */
     private function convertToTab($fields, $key): PanelTab
@@ -173,11 +176,11 @@ class TabbedPanel extends StackedFieldsPanel
 
         /**
          * If a field is not nested into an array or a Tab object
-         * it acts as a tab in itself
+         * it acts as a tab in itself.
          *
          * @link https://github.com/eminiarts/nova-tabs/issues/141
          */
-        if (! is_array($fields)) {
+        if (!is_array($fields)) {
             return new Tab($fields->name, [$fields]);
         }
 

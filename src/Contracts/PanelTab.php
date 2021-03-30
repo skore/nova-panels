@@ -5,7 +5,7 @@ namespace SkoreLabs\NovaPanels\Contracts;
 interface PanelTab
 {
     /**
-     * The name of the tab
+     * The name of the tab.
      *
      * This will be used to remember which tab is selected
      * If the name if not supplied, the sluggified tab title is used
@@ -18,34 +18,34 @@ interface PanelTab
 
     /**
      * Get name of the tab.
-     * 
-     * @return string 
+     *
+     * @return string
      */
     public function getName(): string;
-    
+
     /**
      * Get slug of the tab.
-     * 
-     * @return string 
+     *
+     * @return string
      */
     public function getSlug(): string;
-    
+
     /**
      * Get title of the tab.
-     * 
-     * @return string 
+     *
+     * @return string
      */
     public function getTitle(): string;
 
     /**
      * Get fields of the tab.
-     * 
+     *
      * @return array
      */
     public function getFields(): array;
 
     /**
-     * A boolean or function that returns a boolean
+     * A boolean or function that returns a boolean.
      *
      * If the result is true, the tab will be shown
      *
@@ -58,7 +58,7 @@ interface PanelTab
     public function showIf($condition);
 
     /**
-     * A boolean or function that returns a boolean
+     * A boolean or function that returns a boolean.
      *
      * If the result is false, the tab will be shown
      *
@@ -71,7 +71,7 @@ interface PanelTab
     public function showUnless($condition);
 
     /**
-     * Whether to show the title as HTML
+     * Whether to show the title as HTML.
      *
      * WARNING: setting this to true can leave you open to XSS attacks
      * Only use this if the title comes from a trusted source
@@ -83,7 +83,7 @@ interface PanelTab
     public function titleAsHtml(bool $titleAsHtml);
 
     /**
-     * An icon to be put in front of the tab title
+     * An icon to be put in front of the tab title.
      *
      * @param string $iconAsHtml
      *
@@ -92,7 +92,7 @@ interface PanelTab
     public function beforeIcon(string $iconAsHtml);
 
     /**
-     * An icon to be put behind of the tab title
+     * An icon to be put behind of the tab title.
      *
      * @param string $iconAsHtml
      *
@@ -101,23 +101,25 @@ interface PanelTab
     public function afterIcon(string $iconAsHtml);
 
     /**
-     * A string or string array of classes to put on the tab
+     * A string or string array of classes to put on the tab.
      *
      * @param string|string[] $classes
+     *
      * @return $this
      */
     public function tabClass($classes);
 
     /**
-     * A string or string array of classes to put on the body
+     * A string or string array of classes to put on the body.
      *
      * @param string|string[] $classes
+     *
      * @return $this
      */
     public function bodyClass($classes);
 
     /**
-     * Array representation of the tab
+     * Array representation of the tab.
      *
      * @return array
      */
