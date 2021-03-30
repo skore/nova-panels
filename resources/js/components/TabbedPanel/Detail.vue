@@ -20,7 +20,7 @@
                     <select
                       v-if="Object.keys(lastTabs).length > 0"
                       @change="handleTabSelect($event)"
-                      class="p-2 border-b-2 focus:outline-none tab"
+                      class="p-2 border-b-2 focus:outline-none tab cursor-pointer"
                       :class="getTabClass()"
                     >
                       <option v-if="!activeTab">{{ moreText }}</option>
