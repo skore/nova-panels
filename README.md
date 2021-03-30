@@ -43,4 +43,4 @@ Read more: https://laravel.com/docs/master/releases#support-policy
 - [@eminiarts](https://github.com/eminiarts) packages: [nova-relationship-selector](https://github.com/eminiarts/nova-relationship-selector) & [nova-tabs](https://github.com/eminiarts/nova-tabs)
 - Ruben Robles ([@d8vjork](https://github.com/d8vjork))
 - Skore ([https://www.getskore.com/](https://www.getskore.com/))
-- [And all the contributors](https://github.com/skore-labs/laravel-status/graphs/contributors)
+- [And all the contributors](https://github.com/skore/nova-panels/graphs/contributors)
