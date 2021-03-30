@@ -1,0 +1,27 @@
+{
+    "name": "nova-tabs",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.3.2",
+        "cross-env": "^7.0.3",
+        "laravel-mix": "^1.0",
+        "laravel-nova": "^1.9.0",
+        "tailwindcss": "^2.0.1-compat",
+        "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "vue": "^2.6.12"
+    },
+    "repository": "https://github.com/skore/nova-tabs.git",
+    "author": "Rubén Robles <d8vjork@outlook.com>",
+    "license": "MIT",
+    "private": true
+}

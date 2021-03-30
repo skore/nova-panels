@@ -1,0 +1,39 @@
+{
+    "name": "skorelabs/nova-panels",
+    "description": "A relationship stack for those resources with lots of relationships for Laravel Nova",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rubén Robles",
+            "email": "d8vjork@outlook.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "require-dev": {
+        "illuminate/support": "^8.0",
+        "laravel/nova": "^3.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SkoreLabs\\NovaPanels\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SkoreLabs\\NovaPanels\\ServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
