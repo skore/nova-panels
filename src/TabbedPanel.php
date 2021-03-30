@@ -174,6 +174,10 @@ class TabbedPanel extends StackedFieldsPanel
             return new Tab($fields->name, $fields->data);
         }
 
+        if (! is_array($fields) && $fields instanceof MergeValue) {
+            return new Tab(head($fields->data)->name, $fields->data);
+        }
+
         /**
          * If a field is not nested into an array or a Tab object
          * it acts as a tab in itself.
