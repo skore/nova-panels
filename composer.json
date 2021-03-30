@@ -1,6 +1,6 @@
 {
     "name": "skorelabs/nova-panels",
-    "description": "A relationship stack for those resources with lots of relationships for Laravel Nova",
+    "description": "A custom panels package for those Nova resources with lots of relationships and/or fields",
     "license": "MIT",
     "authors": [
         {
