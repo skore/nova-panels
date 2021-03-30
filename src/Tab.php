@@ -202,16 +202,16 @@ class Tab implements PanelTab, \JsonSerializable, Arrayable
     public function toArray(): array
     {
         return [
-            'title' => $this->getTitle(),
-            'fields' => $this->getFields(),
-            'name' => $this->getName(),
-            'slug' => $this->getSlug(),
-            'shouldShow' => $this->shouldShow(),
+            'title'       => $this->getTitle(),
+            'fields'      => $this->getFields(),
+            'name'        => $this->getName(),
+            'slug'        => $this->getSlug(),
+            'shouldShow'  => $this->shouldShow(),
             'titleAsHtml' => $this->isTitleAsHtml(),
-            'beforeIcon' => $this->getBeforeIcon(),
-            'afterIcon' => $this->getAfterIcon(),
-            'tabClass' => $this->getTabClass(),
-            'bodyClass' => $this->getBodyClass(),
+            'beforeIcon'  => $this->getBeforeIcon(),
+            'afterIcon'   => $this->getAfterIcon(),
+            'tabClass'    => $this->getTabClass(),
+            'bodyClass'   => $this->getBodyClass(),
         ];
     }
 

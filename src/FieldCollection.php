@@ -10,7 +10,8 @@ class FieldCollection extends NovaFieldCollection
     /**
      * Retrieve the field match matches the instance.
      *
-     * @param  string  $type
+     * @param string $type
+     *
      * @return \Eminiarts\Tabs\FieldCollection
      */
     public function whereInstanceOf($type)

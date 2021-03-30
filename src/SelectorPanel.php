@@ -17,8 +17,10 @@ class SelectorPanel extends StackedFieldsPanel
     public $options = [];
 
     /**
-     * You can set the active Option
+     * You can set the active Option.
+     *
      * @param  $name
+     *
      * @return mixed
      */
     public function activeOption($name)
@@ -29,10 +31,12 @@ class SelectorPanel extends StackedFieldsPanel
     }
 
     /**
-     * Add an Option to the Select Field
+     * Add an Option to the Select Field.
+     *
      * @param  $name
      * @param  $field
      * @param  $relationType
+     *
      * @return mixed
      */
     public function addOption($name, $field, $relationType = '')
@@ -46,9 +50,9 @@ class SelectorPanel extends StackedFieldsPanel
             ];
 
             if ($field->component == 'belongs-to-field') {
-                $field->panel       = $name;
+                $field->panel = $name;
                 $field->belongsToId = '';
-                $field->value       = '';
+                $field->value = '';
             }
         }
 
@@ -58,7 +62,8 @@ class SelectorPanel extends StackedFieldsPanel
     /**
      * Prepare the given fields.
      *
-     * @param  \Closure|array $fields
+     * @param \Closure|array $fields
+     *
      * @return array
      */
     protected function prepareFields($fields)
@@ -95,7 +100,8 @@ class SelectorPanel extends StackedFieldsPanel
     }
 
     /**
-     * Resolve the fields in the Options
+     * Resolve the fields in the Options.
+     *
      * @return mixed
      */
     public function resolve($resource, $attribute = null)
@@ -103,12 +109,13 @@ class SelectorPanel extends StackedFieldsPanel
         return collect($this->options)->each(function ($option, $key) use ($resource) {
             if ($option['field'] instanceof Resolvable) {
                 $option['field']->resolve($resource);
-            };
+            }
         });
     }
 
     /**
-     * Show the Select Options on the right side
+     * Show the Select Options on the right side.
+     *
      * @param $value
      */
     public function withSelect()

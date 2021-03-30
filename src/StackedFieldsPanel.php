@@ -15,7 +15,7 @@ abstract class StackedFieldsPanel extends Panel
     public function jsonSerialize()
     {
         return array_merge(parent::jsonSerialize(), [
-            'component' => 'detail-' . Str::kebab(class_basename(get_class($this))),
+            'component' => 'detail-'.Str::kebab(class_basename(get_class($this))),
         ]);
     }
 }
