@@ -6,3 +6,9 @@ mix.setPublicPath('dist')
   // .postCss('dist/css/fields.css', 'css', [
   //   require("tailwindcss"),
   // ])
+
+// if (mix.inProduction()) {
+//   mix.options({
+//     clearConsole: true
+//   });
+// }

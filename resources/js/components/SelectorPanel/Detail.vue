@@ -68,7 +68,6 @@ export default {
   },
   
   mounted() {
-    console.log(this)
     this.activeTab = this.options[0].name;
   },
   

@@ -16,7 +16,7 @@ class ServiceProvider extends BaseServiceProvider
     public function boot()
     {
         Nova::serving(function (ServingNova $event) {
-            Nova::script('relationship-stack', __DIR__.'/../dist/js/fields.js');
+            Nova::script('custom-panels', __DIR__.'/../dist/js/fields.js');
             // Nova::style('relationship-stack', __DIR__ . '/../dist/css/fields.css');
         });
     }

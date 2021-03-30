@@ -173,8 +173,6 @@ export default {
 
                 tab = lastTabs.filter(val => this.activeTab === val[1].slug)
                 tab = tab[0] ? tab[0][1] : lastTabs[0][1];
-
-                console.log(tab)
             }
 
             this.activeTab === tab.slug
